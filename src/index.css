@@ -1,13 +1,15 @@
 html{
   font-size: 62.5%;
   box-sizing: border-box;
-  font-family: Montserrat;
 }
 body, #root{
   height: 100vh;
   margin: 0;
 }
-
+body, input, select, textarea{
+  font-size: 1.6rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
 .grid-container{
   display: grid;
   grid-template-areas: "header"
@@ -15,12 +17,19 @@ body, #root{
   "footer";
   grid-template-rows: 5rem 1fr 5rem;
   grid-template-columns: 1fr;
-  height: 100vh;
+  height: 100%;
 }
 header{
   grid-area: header;
   background-color: rgb(214, 212, 212);
   color: black;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+}
+header a{
+  color: black;
+  text-decoration: none;
 }
 main{
   grid-area: main;
@@ -29,4 +38,7 @@ footer{
   grid-area: footer;
   background-color: rgb(214, 212, 212);
   color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
