@@ -1,0 +1,46 @@
+{
+    "products": [
+        {
+            "id": "1",
+            "image": "images/empty.jpg",
+            "author": "Joseph Marie",
+            "description": "Responsive design course XYZ How to design responsive templates",
+            "prices": 563
+        },
+        {
+            "id": "2",
+            "image": "images/empty.jpg",
+            "author": "Joseph Marie",
+            "description": "Responsive design course XYZ How to design responsive templates",
+            "prices": 563
+        },
+        {
+            "id": "3",
+            "image": "images/empty.jpg",
+            "author": "Joseph Marie",
+            "description": "Responsive design course XYZ How to design responsive templates",
+            "prices": 500
+        },
+        {
+            "id": "4",
+            "image": "images/empty.jpg",
+            "author": "Joseph Marie",
+            "description": "Responsive design course XYZ How to design responsive templates",
+            "prices": 563
+        },
+        {
+            "id": "5",
+            "image": "images/empty.jpg",
+            "author": "Joseph Marie",
+            "description": "Responsive design course XYZ How to design responsive templates",
+            "prices": 450
+        },
+        {
+            "id": "6",
+            "image": "images/empty.jpg",
+            "author": "Joseph Marie",
+            "description": "Responsive design course XYZ How to design responsive templates",
+            "prices": 400
+        }
+    ]
+}
