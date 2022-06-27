@@ -3,6 +3,7 @@ import Home from './components/Home';
 import { BrowserRouter as Router,Routes, Route } from 'react-router-dom';
 import Checkout from './components/Checkout';
 import Profile from './components/Profile';
+import Wishlist from './components/Wishlist';
 
 class App extends React.Component {
   render(){
@@ -23,6 +24,7 @@ class App extends React.Component {
                  <Route exact path='/' element={< Home />}></Route>
                  <Route exact path='/Checkout' element={< Checkout />} ></Route>
                  <Route exact path='/Profile' element={< Profile/>} ></Route>
+                 <Route exact path='/Wishlist' element={< Wishlist/>} ></Route>
           </Routes>
           </main>
         </div>
