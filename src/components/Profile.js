@@ -102,7 +102,7 @@ export default class Profile extends Component {
 
   render() {
     const { Display, firstName, lastName } = this.state;
-    const { isChecked } = this.state;
+    // const { isChecked } = this.state;
     return (
       <div className='profile'>
         <div className='black'>
@@ -187,35 +187,37 @@ export default class Profile extends Component {
                       <input
                       type="checkbox"
                       value= "Designer"
-                      checked={isChecked}
+                      
                       onChange={this.toggleCheckboxChange}
                       />
                       <label for="Designer">Designer</label>
                       <input
                       type="checkbox"
                       value= "Developer"
-                      checked={isChecked}
+                      
                       onChange={this.toggleCheckboxChange}
                       />
                       <label for="Developer">Developer</label>
                       <input
                       type="checkbox"
                       value= "Project Manager"
-                      checked={isChecked}
+                      
                       onChange={this.toggleCheckboxChange}
                       />
                       <label for="Project Manager">Project Manager</label>
                       <input
                       type="checkbox"
                       value= "Professional"
-                      checked={isChecked}
+                     
                       onChange={this.toggleCheckboxChange}
                       />
                       <label for="Professional">Professional</label>
                     </div>
                   </div>
                 </div>
+                <br/>
                 <div className='profile-radio'>
+                  <label> Are you Student or Professional?</label>
                   <div className="radio">
                     <label>
                       <input
