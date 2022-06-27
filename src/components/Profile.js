@@ -27,7 +27,8 @@ export default class Profile extends Component {
       lastName: { value: "", isTouched: false, isValid: false, errors: [] },
       textAreaValue: "",
       isChecked: false,
-      showMenu: false 
+      showMenu: false,
+      show: false
     };
     this.handleChange = this.handleChange.bind(this);
     this.onValueChange = this.onValueChange.bind(this);
@@ -180,38 +181,46 @@ export default class Profile extends Component {
                     cols={100}
                   />
                 </div>
+                <br/>
                 <div className="profile-checkbox">
                   <div className='row'>
                     <div className='col-12'>
                       <label> Your Area of Interest</label>
-                      <input
-                      type="checkbox"
-                      value= "Designer"
-                      
-                      onChange={this.toggleCheckboxChange}
-                      />
-                      <label for="Designer">Designer</label>
-                      <input
-                      type="checkbox"
-                      value= "Developer"
-                      
-                      onChange={this.toggleCheckboxChange}
-                      />
-                      <label for="Developer">Developer</label>
-                      <input
-                      type="checkbox"
-                      value= "Project Manager"
-                      
-                      onChange={this.toggleCheckboxChange}
-                      />
-                      <label for="Project Manager">Project Manager</label>
-                      <input
-                      type="checkbox"
-                      value= "Professional"
-                     
-                      onChange={this.toggleCheckboxChange}
-                      />
-                      <label for="Professional">Professional</label>
+                        <div className='checkbox'>
+                          <input
+                          type="checkbox"
+                          value= "Designer"
+                          onChange={this.toggleCheckboxChange}
+                          />
+                          <label for="Designer">Designer</label>
+                        </div>
+                        <div className='checkbox'>
+                          <input
+                          type="checkbox"
+                          value= "Developer"
+                          
+                          onChange={this.toggleCheckboxChange}
+                          />
+                          <label for="Developer">Developer</label>
+                        </div>
+                        <div className='checkbox'>
+                          <input
+                          type="checkbox"
+                          value= "Project Manager"
+                          
+                          onChange={this.toggleCheckboxChange}
+                          />
+                          <label for="Project Manager">Project Manager</label>
+                        </div>
+                        <div className='checkbox'>
+                          <input
+                          type="checkbox"
+                          value= "Professional"
+                        
+                          onChange={this.toggleCheckboxChange}
+                          />
+                          <label for="Professional">Professional</label>
+                        </div>
                     </div>
                   </div>
                 </div>
@@ -248,7 +257,7 @@ export default class Profile extends Component {
 {/* hide and show   */}
                 { this.state.showMenu      
                   ?
-                  <div>
+                  <div className='profile-extra'>
                     <label className='text'>How much experience You have?</label>
                       <div className="radio">
                         <label>
@@ -283,6 +292,7 @@ export default class Profile extends Component {
                           10 & above
                         </label>
                       </div>
+                      <br/>
                     <label className='text'>What is your expertise</label>
                       <div className="radio">
                         <label>
@@ -320,23 +330,24 @@ export default class Profile extends Component {
                   </div>
                   : null
                 }
+                <br/>
                   <div className='profile-save'>
-                  <button className='button primary' type="submit">
+                  <button className='button primary' type="submit" onClick={() => this.setState({ show: !this.state.show })}>
                     Save
                   </button>
                   </div>
                   <Modal show={this.state.show} animation={false} dialogClassName="my-modal">
-                <Modal.Header>
-                  <Modal.Title></Modal.Title>
-                    </Modal.Header>
-                      <Modal.Body>You data is saved successfully.</Modal.Body>
-                      <br/>
-                        <Modal.Footer>
-                          <Button variant="secondary" onClick={() => this.setState({ show: !this.state.show })}>
-                            OK
-                          </Button>
-                        </Modal.Footer>
-                </Modal>
+                  <Modal.Header>
+                    <Modal.Title></Modal.Title>
+                      </Modal.Header>
+                        <Modal.Body>You data is saved successfully.</Modal.Body>
+                        <br/>
+                          <Modal.Footer>
+                            <Button variant="secondary" onClick={() => this.setState({ show: !this.state.show })}>
+                              OK
+                            </Button>
+                          </Modal.Footer>
+                  </Modal>
                 </div>
               </form>
             </div>

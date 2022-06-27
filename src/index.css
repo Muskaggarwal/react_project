@@ -302,3 +302,13 @@ margin-top: 15px;
 input[name='role'] {
 	accent-color: #FF6738;
 }
+.checkbox{
+  display: flex;
+  accent-color: #FF6738;
+}
+.profile-extra{
+  margin-left: 20px;
+  margin-right: 20px;
+  border: 1px #c0c0c0 solid;
+  padding: 2rem;
+}
