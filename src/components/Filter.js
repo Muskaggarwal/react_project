@@ -4,7 +4,7 @@ export default class Filter extends Component {
   render() {
     return (
         <div className='filter'>
-            <div className='filter-head'> All Courses</div>
+            <div className='filter-head'><strong>All Courses</strong></div>
             <div className='filter-sort'>Course Price {" "}
                 <select value={this.props.sort} onChange={this.props.sortProducts}>
                     <option>Latest</option>
