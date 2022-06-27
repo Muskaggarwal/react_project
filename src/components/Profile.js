@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
 
 const validationRules = {
   required: val => val !== null && val !== undefined && val !== "",
@@ -100,7 +102,6 @@ export default class Profile extends Component {
 
   render() {
     const { Display, firstName, lastName } = this.state;
-    const { label } = this.props;
     const { isChecked } = this.state;
     return (
       <div className='profile'>
@@ -180,13 +181,39 @@ export default class Profile extends Component {
                   />
                 </div>
                 <div className="profile-checkbox">
-                  <label> Your Area of Interest</label>
-                    <input
+                  <div className='row'>
+                    <div className='col-12'>
+                      <label> Your Area of Interest</label>
+                      <input
                       type="checkbox"
-                      value={label}
+                      value= "Designer"
                       checked={isChecked}
                       onChange={this.toggleCheckboxChange}
-                    />
+                      />
+                      <label for="Designer">Designer</label>
+                      <input
+                      type="checkbox"
+                      value= "Developer"
+                      checked={isChecked}
+                      onChange={this.toggleCheckboxChange}
+                      />
+                      <label for="Developer">Developer</label>
+                      <input
+                      type="checkbox"
+                      value= "Project Manager"
+                      checked={isChecked}
+                      onChange={this.toggleCheckboxChange}
+                      />
+                      <label for="Project Manager">Project Manager</label>
+                      <input
+                      type="checkbox"
+                      value= "Professional"
+                      checked={isChecked}
+                      onChange={this.toggleCheckboxChange}
+                      />
+                      <label for="Professional">Professional</label>
+                    </div>
+                  </div>
                 </div>
                 <div className='profile-radio'>
                   <div className="radio">
@@ -296,6 +323,18 @@ export default class Profile extends Component {
                     Save
                   </button>
                   </div>
+                  <Modal show={this.state.show} animation={false} dialogClassName="my-modal">
+                <Modal.Header>
+                  <Modal.Title></Modal.Title>
+                    </Modal.Header>
+                      <Modal.Body>You data is saved successfully.</Modal.Body>
+                      <br/>
+                        <Modal.Footer>
+                          <Button variant="secondary" onClick={() => this.setState({ show: !this.state.show })}>
+                            OK
+                          </Button>
+                        </Modal.Footer>
+                </Modal>
                 </div>
               </form>
             </div>
